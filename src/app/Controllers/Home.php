@@ -9,7 +9,7 @@ class Home
 {
     public function index():string
     {
-        return (string)  View::make('index', ["title"=>"First post"]);
+        return  View::make('index', ["title"=>"First post"])->render(true);
         
     }
 }

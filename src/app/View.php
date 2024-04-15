@@ -17,7 +17,7 @@ class View
         return new static($view, $params);
     }
 
-    public function render()
+    public function render(bool $withTemplate = false)
     {
         $viewPath = VIEWS_PATH . $this->view . '.php';
 
@@ -30,7 +30,16 @@ class View
         }
         
         ob_start();
+        if ($withTemplate) {
+        
+            include VIEWS_PATH . 'template/header.php';
+        }
         include $viewPath;
+        
+              if ($withTemplate) {
+        
+            include VIEWS_PATH . 'template/header.php';
+        }
         return (string)ob_get_clean();
     }
 
