@@ -7,6 +7,10 @@ use App\View;
 
 require __DIR__ . "/../vendor/autoload.php";
 
+// load env
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) );
+$dotenv->load();
+
 // start the session before anything else
 session_start();
 
@@ -14,8 +18,6 @@ session_start();
 define("VIEWS_PATH", __DIR__ . "/../views" .  DIRECTORY_SEPARATOR);
 
 try {
-
-
 
     $router = new App\Router();
 
