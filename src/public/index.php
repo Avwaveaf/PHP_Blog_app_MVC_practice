@@ -29,5 +29,8 @@ try {
 
     echo $router->resolve($_SERVER['REQUEST_URI'], strtolower($_SERVER['REQUEST_METHOD']));
 } catch (RouteNotFoundException $e) {
+    // define response 404
+    http_response_code(404);
+    
     echo View::make('error/404')->render(true);
 }

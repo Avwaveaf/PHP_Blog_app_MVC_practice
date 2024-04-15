@@ -9,14 +9,14 @@ class Blogs
 {
     public function index():string
     {
-        return (string) View::make('blogs/index');
+        return View::make('blogs/index')->render(true);
         
     }
 
     public function compose():string
     {
 
-       return (string) View::make('blogs/compose');
+       return View::make('blogs/compose')->render(true);
     }
 
     public function store(): void
