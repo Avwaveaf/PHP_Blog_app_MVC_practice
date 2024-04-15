@@ -1,0 +1,27 @@
+# Ignore system files
+.dockerignore
+.env
+
+# Ignore Composer dependencies (vendor folder)
+vendor/
+
+# Ignore Docker-related files
+.docker/
+docker-compose.override.yml
+docker-compose.yml
+
+# Ignore logs and cache
+/var/log/*
+/var/cache/*
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore user-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore any other sensitive or generated files
+*.log
+*.sql
