@@ -5,6 +5,9 @@
 # Ignore Composer dependencies (vendor folder)
 vendor/
 
+#ignore storage db
+mysql/
+
 # Ignore Docker-related files
 .docker/
 docker-compose.override.yml
